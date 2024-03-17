@@ -1,0 +1,199 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #212121;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 600px;
+  height: 254px;
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+  transition: width 0.5s ease, height 0.5s ease;
+ }
+ 
+ .card2 {
+  width: 600px;
+  height: 254px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  transform: scale(0.99);
+  transition: width 0.5s ease, height 0.5s ease;
+ }
+
+.card.quadrado {
+  width: 200px; /* Largura final */
+  height: 300px; /* Altura final */
+}
+
+.card2.quadrado {
+  width: 200px; /* Largura final */
+  height: 300px; /* Altura final */
+}
+
+.code{
+  display: flex;
+  order: 2;
+  align-items: center;
+  justify-content: end;
+  background-color: white;
+  color: #1a1a1a;
+  border-radius: 10px;
+  height: 20%;
+}
+
+.text {
+  font: bold;
+  font-size: x-large;
+  font-family: sans-serif;
+  padding: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* parte da animação do loader */
+.pl {
+  display: block;
+  width: 5.375em;
+  height: 5.375em;
+}
+
+.pl__arrows,
+.pl__ring-rotate,
+.pl__ring-stroke,
+.pl__tick {
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.pl__arrows {
+  animation-name: arrows42;
+  transform: rotate(45deg);
+  transform-origin: 16px 52px;
+}
+
+.pl__ring-rotate,
+.pl__ring-stroke {
+  transform-origin: 80px 80px;
+}
+
+.pl__ring-rotate {
+  animation-name: ringRotate42;
+}
+
+.pl__ring-stroke {
+  animation-name: ringStroke42;
+  transform: rotate(-45deg);
+}
+
+.pl__tick {
+  animation-name: tick42;
+}
+
+.pl__tick:nth-child(2) {
+  animation-delay: -1.75s;
+}
+
+.pl__tick:nth-child(3) {
+  animation-delay: -1.5s;
+}
+
+.pl__tick:nth-child(4) {
+  animation-delay: -1.25s;
+}
+
+.pl__tick:nth-child(5) {
+  animation-delay: -1s;
+}
+
+.pl__tick:nth-child(6) {
+  animation-delay: -0.75s;
+}
+
+.pl__tick:nth-child(7) {
+  animation-delay: -0.5s;
+}
+
+.pl__tick:nth-child(8) {
+  animation-delay: -0.25s;
+}
+
+/* Animations */
+@keyframes arrows42 {
+  from {
+    transform: rotate(45deg);
+  }
+
+  to {
+    transform: rotate(405deg);
+  }
+}
+
+@keyframes ringRotate42 {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(720deg);
+  }
+}
+
+@keyframes ringStroke42 {
+  from,
+	to {
+    stroke-dashoffset: 452;
+    transform: rotate(-45deg);
+  }
+
+  50% {
+    stroke-dashoffset: 169.5;
+    transform: rotate(-180deg);
+  }
+}
+
+@keyframes tick42 {
+  from,
+	3%,
+	47%,
+	to {
+    stroke-dashoffset: -12;
+  }
+
+  14%,
+	36% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.container-inicial {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.texto-aguardo{
+  color: white;
+  font-family: sans-serif;
+  font-size: xx-large;
+}
