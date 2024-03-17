@@ -21,6 +21,14 @@ function handleServerMessage(event){
   }
 }
 
+function limparSorteioAnterior(){
+  // Remove todos os elementos com a classe "dinamico"
+  const elementosDinamicos = document.querySelectorAll('.dinamico');
+  elementosDinamicos.forEach(elemento => {
+    elemento.parentNode.removeChild(elemento);
+  });
+}
+
 function setClientState(state, code = ""){
 
   const simboloWinner = document.createElement("img")
@@ -40,6 +48,13 @@ function setClientState(state, code = ""){
       card.classList.add('quadrado');
       card2.classList.add('quadrado');
       body.style.backgroundColor = "rgba(0, 255, 82, 0.1)"
+
+      // Limpa os elementos criados dinamicamente
+      limparSorteioAnterior();
+
+      // Adiciona a classe "dinamico" aos elementos criados dinamicamente
+      simboloWinner.classList.add('dinamico');
+
       card2.appendChild(simboloWinner)
       confimation.classList.remove('hidden')
       confimation.innerText = code
@@ -47,6 +62,13 @@ function setClientState(state, code = ""){
       card.classList.add('quadrado');
       card2.classList.add('quadrado');
       body.style.backgroundColor = "rgba(255, 0, 3, 0.1)"
+
+      // Limpa os elementos criados dinamicamente
+      limparSorteioAnterior();
+
+      // Adiciona a classe "dinamico" aos elementos criados dinamicamente
+      simboloLoser.classList.add('dinamico');
+
       card2.appendChild(simboloLoser)
     }
   }, 100);

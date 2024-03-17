@@ -67,5 +67,5 @@ botaoSorteio.onclick = function(){
 
 function displayCode(code){
   codeElement.innerText = code; // Corrigido aqui: usando 'codeElement' para definir o texto
-  botaoSorteio.innerText = "Sorteio Realizado!";
+  botaoSorteio.innerText = "Sorteio Realizado";
 }
