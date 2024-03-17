@@ -1,4 +1,4 @@
-const WS_URL = "https://sorteio-xkuv.onrender.com";
+const WS_URL = "wss://projeto-sorteio.onrender.com";
 
 const STATUS = {
   WIN: "venceu",
