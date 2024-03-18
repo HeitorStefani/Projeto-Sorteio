@@ -43,7 +43,7 @@
     }
 
     .code-container {
-      display: none;
+      display: flex;
       justify-content: center;
       align-items: center;
       background-color: #ffffff;
@@ -141,13 +141,31 @@
     }
   }
 
+  .hidden {
+    display: none;
+  }
+
+  @media only screen and (max-device-width: 425px) {
+    .code-container{
+      padding-inline: 20px;
+      margin-top: 5px;
+    }
+    #code {
+      font-size: medium;
+    }
+    .span {
+      font-size: medium;
+    }
+    
+  }
+
   </style>
 </head>
 <body>
   <div class="container">
     <p class="counter">Numero de participantes: <span id="participant-counter">0</span></p>
     <button class="cta" id="start-raffle-button">
-        <span class="span">Iniciar Sorteio</span>
+        <span class="span" id="sorteioButton">Iniciar Sorteio</span>
         <span class="second">
           <svg width="50px" height="20px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -160,7 +178,7 @@
     </button>
     
     </button>
-    <div class="code-container">
+    <div class="code-container hidden" id="container-code">
       <p id="code"></p>
     </div>
   </div>

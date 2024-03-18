@@ -7,7 +7,7 @@ const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 
 // Configurações básicas
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 const actions = {
   ADMIN: 'admin',
   READY: 'ready',

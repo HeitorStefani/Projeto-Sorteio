@@ -49,7 +49,7 @@ function genereteCode(tam){
 
 connectionWebSocket();
 
-const botaoSorteio = document.getElementById("start-raffle-button");
+const botaoSorteio = document.getElementById("sorteioButton");
 const codeElement = document.getElementById("code"); // Renomeei para evitar conflito com a variável 'code' usada dentro da função
 
 botaoSorteio.onclick = function(){
@@ -65,7 +65,10 @@ botaoSorteio.onclick = function(){
   }
 }
 
+const containerCode = document.getElementById("container-code");
+
 function displayCode(code){
-  codeElement.innerText = code; // Corrigido aqui: usando 'codeElement' para definir o texto
+  codeElement.innerText = code;
+  containerCode.classList.remove("hidden");
   botaoSorteio.innerText = "Sorteio Realizado";
 }

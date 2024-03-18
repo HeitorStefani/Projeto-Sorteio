@@ -197,3 +197,17 @@ body, html {
   font-family: sans-serif;
   font-size: xx-large;
 }
+
+@media only screen and (max-device-width: 425px) {
+  .card2{
+    width: 350px;
+  } 
+  .card {
+    width: 350px;
+  } 
+
+  .texto-aguardo {
+    font-size: x-large;
+  }
+
+}
